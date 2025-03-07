@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Islamic Studies Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function search() {
+      let input = document.getElementById('searchInput').value.toLowerCase();
+      let sections = document.querySelectorAll('section');
+      let results = document.getElementById('searchResults');
+      results.innerHTML = '';
+
+      sections.forEach(section => {
+        if (section.innerText.toLowerCase().includes(input)) {
+          let result = document.createElement('div');
+          let heading = section.querySelector('h2') ? section.querySelector('h2').innerText : "No Title";
+          let para = section.querySelector('p') ? section.querySelector('p').innerText : "";
+          result.innerHTML = '<h3>' + heading + '</h3><p>' + para + '</p>';
+          results.appendChild(result);
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Islamic Studies</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#programs">Programs</a>
+      <a href="#resources">Resources</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div id="search">
+      <input type="text" id="searchInput" placeholder="Search Islamic topics...">
+      <button onclick="search()">Search</button>
+    </div>
+  </header>
+
+  <section id="home">
+    <h2>Home</h2>
+    <p>Welcome to Islamic Studies — your source for authentic Islamic knowledge based on the Quran and the Sunnah of the Prophet Muhammad (peace be upon him).</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are dedicated to spreading the true message of Islam by offering a deeper understanding of the faith. Our content is based on authentic sources: the Quran, and the Hadith collections recognized by scholars.</p>
+  </section>
+
+  <section id="programs">
+    <h2>Programs</h2>
+    <ul>
+      <li>What is Islam according to the Quran</li>
+      <li>The Sunnah of the Prophet Muhammad (PBUH)</li>
+      <li>Introduction to Fiqh (Islamic Jurisprudence)</li>
+    </ul>
+  </section>
+
+  <section id="resources">
+    <h2>Resources</h2>
+    <ul>
+      <li>
+        <a href="https://quran.com/" target="_blank">
+          The Holy Quran
+        </a>
+      </li>
+      <li>
+        <a href="https://sunnah.com/bukhari" target="_blank">
+          Sahih Bukhari
+        </a>
+      </li>
+      <li>
+        <a href="https://sunnah.com/muslim" target="_blank">
+          Sahih Muslim
+        </a>
+      </li>
+      <li>
+        <a href="https://sunnah.com/tirmidhi" target="_blank">
+          Jami` at-Tirmidhi
+        </a>
+      </li>
+      <li>
+        <a href="https://sunnah.com/abudawud" target="_blank">
+          Sunan Abu Dawud
+        </a>
+      </li>
+      <li>
+        <a href="https://sunnah.com/nasai" target="_blank">
+          Sunan An-Nasa'i
+        </a>
+      </li>
+      <li>
+        <a href="https://sunnah.com/ibnmajah" target="_blank">
+          Sunan Ibn Majah
+        </a>
+      </li>
+      <li>
+        <a href="https://www.example.com/introduction-to-islam" target="_blank">
+          Introduction to Islam by Prof. M. Cherif Bassiouni
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: +254721405367</p>
+    <p>Email: islamicstudies76@gmail.com</p>
+  </section>
+
+  <section id="searchResults">
+    <h2>Search Results:</h2>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Islamic Studies Website | Developed by Zakaria Siat</p>
+  </footer>
+</body>
+</html>
+
+
+
