@@ -1,0 +1,22 @@
+/* Basic styling for the body */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('symbol_of_islam.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+body {
+    background-image: url('symbol_of_islam.jpeg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Sets the body height to fill the screen */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
